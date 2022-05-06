@@ -19,6 +19,15 @@ except:
     print('No se puede abrir el archivo:', narchivo)
     exit()
 
+lista_ok = []
+n = 0
+
 for linea in man_a:
      lista = linea.rstrip().split(' ')
-     print (lista)   
+     #print('lista antes if :', lista)
+     for elem in lista:
+        if not (elem in lista_ok) :
+             lista_ok.append(elem)
+lista_ok.sort()
+print('lista_ok', lista_ok)
+
